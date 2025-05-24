@@ -1,6 +1,6 @@
-# Integrated optimization of cropland management to address the global phosphorus sustainability challenge
+# Optimizing global cropland management to address phosphorus sustainability
 
-Official implementation of paper: *Integrated optimization of cropland management to address the global phosphorus sustainability challenge*.
+Official implementation of paper: *Optimizing global cropland management to address phosphorus sustainability*.
 
 ## Installation
 
