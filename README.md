@@ -50,7 +50,7 @@ To utilize ensemble models, you may first train the model under ``RandomForest``
 
 - For ``seed``, you can set it to any positive integers, since it is task-agnostic and model-agnostic.
 - For ``target``, there is one available option that represent different targets in our paper: ``PUE``.
-- For ``model``, there are few available options that represent different methods: ``RandomForest``, ``CatBoost``, ``LightGBM``, ``XGBoost``, ``AutoSklearn``, ``MLP``, ``CNN``, ``ResNet``, ``FTTransformer``, ``DeepForest``. 
+- For ``model``, there are few available options that represent different methods: ``RandomForest``, ``CatBoost``, ``LightGBM``, ``XGBoost``, ``MLP``, ``CNN``, ``ResNet``, ``FTTransformer``, ``DeepForest``. 
 
 ## Contact
 
