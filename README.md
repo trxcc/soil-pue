@@ -1,6 +1,6 @@
 # Soil-PUE
 
-Official implementation of the manuscript **“Optimizing global cropland management to advance phosphorus sustainability.”**
+Official implementation of the 2026 *Nature Food* paper **“Optimizing global cropland management to advance phosphorus sustainability.”**
 
 This repository contains the core machine-learning code used to model phosphorus use efficiency (PUE), compare tabular regression methods, construct the ensemble model, and evaluate cropland-management scenarios for maize, rice, and wheat.
 
@@ -62,18 +62,18 @@ The training data, global prediction inputs, and trained model checkpoints refer
 
 ## Citation
 
-If you use this repository in your research, please cite the manuscript:
+If you use this repository in your research, please cite the paper:
 
 ```bibtex
-@misc{sun2025optimizing,
-  title  = {Optimizing Global Cropland Management to Advance Phosphorus Sustainability},
-  author = {Sun, Yishen and Hu, Han and Tan, Rong-Xi and Helfenstein, Julian and McDowell, Richard W. and Gu, Baojing and Ni, Haowei and Huang, Weigen and Ding, Jixian and Xue, Ke and Qian, Chao and Crowther, Thomas W. and Zhou, Jizhong and Zhou, Zhi-Hua and Zhang, Jiabao and Liang, Yuting},
-  year   = {2025},
-  note   = {Manuscript}
+@article{sun2026optimizing,
+  title   = {Optimizing Global Cropland Management to Advance Phosphorus Sustainability},
+  author  = {Sun, Yishen and Hu, Han and Tan, Rong-Xi and Helfenstein, Julian and McDowell, Richard W. and Gu, Baojing and Ni, Haowei and Huang, Weigen and Ding, Jixian and Xue, Ke and Qian, Chao and Crowther, Thomas W. and Zhou, Jizhong and Zhou, Zhi-Hua and Zhang, Jiabao and Liang, Yuting},
+  journal = {Nature Food},
+  year    = {2026}
 }
 ```
 
-The journal, DOI, and other publication fields should be updated when the final bibliographic record becomes available.
+The volume, issue, page range, and DOI should be added when the final bibliographic record becomes available.
 
 The same entry is available in [`CITATION.bib`](CITATION.bib).
 
