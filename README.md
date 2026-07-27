@@ -71,7 +71,7 @@ If you use this repository in your research, please cite the paper:
 ```bibtex
 @article{sun2026global,
   title   = {Global patterns and feasible improvement potential of phosphorus use efficiency in cereal croplands},
-  author  = {Sun, Yishen and Hu, Han and Tan, Rong-Xi and Helfenstein, Julian and McDowell, Richard W. and Gu, Baojing and Ni, Haowei and Huang, Weigen and Ding, Jixian and Xue, Ke and Qian, Chao and Crowther, Thomas W. and Zhou, Jizhong and Zhou, Zhi-Hua and Zhang, Jiabao and Liang, Yuting},
+  author  = {Sun, Yishen and Hu, Han and Tan, Rong-Xi and Helfenstein, Julian and McDowell, Richard W. and Gu, Baojing and Ni, Haowei and Huang, Weigen and Ding, Jixian and Xue, Ke and Qian, Chao and Zhou, Jizhong and Zhou, Zhi-Hua and Zhang, Jiabao and Liang, Yuting},
   journal = {Nature Food},
   year    = {2026}
 }
