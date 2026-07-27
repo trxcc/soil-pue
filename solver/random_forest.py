@@ -11,7 +11,7 @@ from sklearn.model_selection import GridSearchCV, ParameterGrid
 from sklearn.metrics import make_scorer, r2_score
 
 class RandomForestModel(RegressionModel):
-    def __init__(self, name: str = "RandomForest", task_name: str = 'MurA', seed: int = 2024, model_dir = None, results_dir = None, n_dim=None) -> None:
+    def __init__(self, name: str = "RandomForest", task_name: str = 'MurA', seed: int = 42, model_dir = None, results_dir = None, n_dim=None) -> None:
         super().__init__(name)
         self.model_dir = model_dir
         self.results_dir = results_dir

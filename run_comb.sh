@@ -2,6 +2,7 @@
 MAX_JOBS=10
 AVAILABLE_GPUS="0 1"
 MAX_RETRIES=1
+SEEDS=({42..54})
 
 get_gpu_allocation() {
     local job_number=$1
@@ -43,7 +44,7 @@ run_with_retry() {
     fi
 }
 
-for seed in 1000 2000 3000 4000 5000 6000 7000 8000 9000; do
+for seed in "${SEEDS[@]}"; do
     check_jobs
     gpu_allocation=$(get_gpu_allocation $job_number)
     ((job_number++))

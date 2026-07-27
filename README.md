@@ -24,7 +24,15 @@ conda create -n soil-pue python=3.9
 conda activate soil-pue
 ```
 
-The code depends on common scientific Python and machine-learning packages, including PyTorch, pandas, NumPy, scikit-learn, XGBoost, LightGBM, CatBoost, SHAP, Optuna, and Weights & Biases, together with the model-specific packages imported in `solver/`.
+### Dependencies
+
+The code depends on common scientific Python and machine-learning packages, including PyTorch, pandas, NumPy, scikit-learn, XGBoost, LightGBM, CatBoost, SHAP, Optuna, Weights & Biases, and **EconML 0.16.0**, together with the model-specific packages imported in `solver/`.
+
+Install the required EconML version with:
+
+```bash
+pip install econml==0.16.0
+```
 
 Weights & Biases is used for experiment tracking. Configure your account by following the [Weights & Biases quickstart](https://docs.wandb.ai/quickstart), or set `WANDB_MODE=offline` when running without online logging.
 
@@ -36,7 +44,7 @@ To train and evaluate one model, run:
 python main.py \
   --which-obj PUE \
   --model-name RandomForest \
-  --seed 2024
+  --seed 42
 ```
 
 Available model names are:
@@ -51,10 +59,10 @@ To enable hyperparameter optimization, add `--optimize-hyperparams`. The optimiz
 After training Random Forest, CatBoost, and XGBoost for the same seed, run the ensemble workflow with:
 
 ```bash
-python ensemble.py --seed 2024
+python ensemble.py --seed 42
 ```
 
-The batch scripts reproduce the model-and-seed sweeps used in the original computing environment. Review their GPU and concurrency settings before running them on a different system.
+The experiments use 13 consecutive random seeds, from `42` through `54` (inclusive). The batch scripts run this complete seed set. Review their GPU and concurrency settings before running them on a different system.
 
 ## Data and model availability
 

@@ -20,7 +20,7 @@ matplotlib.rcParams.update(params)
 plt.rc('font',family='Times New Roman')
 
 env2methodseed = {
-    'PUE': [('Ensemble (CB + XG + RF)', i) for i in range(1000, 9001, 1000)]
+    'PUE': [('Ensemble (CB + XG + RF)', i) for i in range(42, 55)]
 }
 
 base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
@@ -156,5 +156,3 @@ sorted_items = sorted(occur_dict.items(), key=lambda item: item[1])
 print("Sorted key-value pairs by ascending values:")
 for key, value in sorted_items:
     print(f"{key}: {value + 2}")
-        
-        

@@ -6,7 +6,7 @@ from .base import RegressionModel
 from autosklearn.regression import AutoSklearnRegressor
 
 class AutoSklearnModel(RegressionModel):
-    def __init__(self, name: str = "AutoSklearn", task_name: str = '', seed: int = 2024, model_dir = None, results_dir = None, n_dim=None) -> None:
+    def __init__(self, name: str = "AutoSklearn", task_name: str = '', seed: int = 42, model_dir = None, results_dir = None, n_dim=None) -> None:
         super().__init__(name)
         self.model = AutoSklearnRegressor(
             memory_limit=307200,

@@ -53,7 +53,7 @@ parser.add_argument('--which-obj', type=str, choices=['MurA', 'GlcN', 'F_GN', 'A
 parser.add_argument('--model-name', type=str, choices=['RandomForest', 'AutoSklearn', 'XGBoost',
                                                        'LightGBM', 'CNN', 'CatBoost', 'DeepForest',
                                                        'FTTransformer', 'MLP', 'ResNet'], default='RandomForest')
-parser.add_argument('--seed', type=int, default=2024)
+parser.add_argument('--seed', type=int, default=42)
 parser.add_argument('--optimize-hyperparams', action='store_true')
 parser.add_argument('--optimize-method', type=str, choices=['BayesOpt', 'GridSearch'], default='BayesOpt')
 args = parser.parse_args()

@@ -2,11 +2,12 @@
 MAX_JOBS=10
 TOTAL_GPUS=2
 MAX_RETRIES=0
+SEEDS=({42..54})
 
 get_gpu_allocation() {
     local job_number=$1
     local gpu_id=$((job_number % TOTAL_GPUS)) # Calculate which GPU to allocate
-    echo $gpu_id+1
+    echo "$gpu_id"
 }
 
 check_jobs() {
@@ -43,7 +44,7 @@ run_with_retry() {
 
 for which_obj in "PUE"; do
     for model_name in "RandomForest" "LightGBM" "CatBoost" "XGBoost" "FTTransformer" "MLP" "CNN" "ResNet" "AutoSklearn" "DeepForest"; do
-        for seed in 1000 2000 3000 4000 5000 6000 7000 8000 9000; do
+        for seed in "${SEEDS[@]}"; do
             check_jobs  
             gpu_allocation=$(get_gpu_allocation $job_number)
             ((job_number++))

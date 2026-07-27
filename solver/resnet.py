@@ -17,8 +17,9 @@ from sklearn.model_selection import KFold
 from rtdl_revisiting_models import ResNet
 
 class ResNetModel(RegressionModel):
-    def __init__(self, name: str = "ResNet", task_name: str = "", seed: int = 2024, model_dir = None, results_dir = None, n_dim = None):
+    def __init__(self, name: str = "ResNet", task_name: str = "", seed: int = 42, model_dir = None, results_dir = None, n_dim = None):
         super().__init__(name)
+        self.seed = seed
         self.X_val = None
         self.y_val = None 
         self.model = None
@@ -53,7 +54,7 @@ class ResNetModel(RegressionModel):
             optimizing: bool = False,
             save_model: bool = False) -> None:
         
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.1, random_state=2023)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.1, random_state=self.seed)
         self.X_train = X_train
         self.X_val = X_val
         self.y_train = y_train
@@ -244,7 +245,7 @@ class ResNetModel(RegressionModel):
                 weight_decay=trial_args_dict['weight_decay']
             )
 
-            kf = KFold(n_splits=5, shuffle=True, random_state=2024)
+            kf = KFold(n_splits=5, shuffle=True, random_state=self.seed)
             scores = []
 
             for train_index, val_index in kf.split(X_train):
