@@ -24,14 +24,10 @@ conda create -n soil-pue python=3.9
 conda activate soil-pue
 ```
 
-### Dependencies
-
-The code depends on common scientific Python and machine-learning packages, including PyTorch, pandas, NumPy, scikit-learn, XGBoost, LightGBM, CatBoost, SHAP, Optuna, Weights & Biases, and **EconML 0.16.0**, together with the model-specific packages imported in `solver/`.
-
-Install the required EconML version with:
+Install the Python dependencies with:
 
 ```bash
-pip install econml==0.16.0
+pip install -r requirements.txt
 ```
 
 Weights & Biases is used for experiment tracking. Configure your account by following the [Weights & Biases quickstart](https://docs.wandb.ai/quickstart), or set `WANDB_MODE=offline` when running without online logging.
